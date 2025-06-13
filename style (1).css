@@ -1,0 +1,231 @@
+/* --- INÍCIO DO SEU style.css --- */
+
+.cabecalho {
+  background-color: #A6CD57;
+  color: #010101;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: relative; /* Mantenha AQUI */
+}
+
+.cabecalho-imagem {
+  width: 80px;
+  height: auto;
+  max-width: 100%;
+}
+
+/* Esta classe .menu parece não ser usada no HTML do menu, mas mantida caso seja para outra coisa */
+.menu {
+  width: 80px;
+  height: auto;
+  max-width: 100%;
+}
+
+.hazbin {
+  background-image: linear-gradient(#F8F8F0, #F8F8F0); /* Isso é redundante se o body já tem a cor */
+  color: #032F1A;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  min-height: 200px;
+  text-align: center;
+}
+
+body {
+  font-family: "Inknut Antiqua", serif;
+  background-color: #F8F8F0; /* Use background-color diretamente, não background-image */
+}
+
+.VibraCampoCidade-title {
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.main-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 900px;
+  margin: 20px auto;
+  gap: 30px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.text-block {
+  flex: 1;
+  min-width: 300px;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.paisagem1 {
+  width: 350px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.hazbin p {
+  max-width: 600px;
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+
+.VibraCampoCidade-um,
+.VibraCampoCidade-title-um-e-meio,
+.VibraCampoCidade-title-dois {
+  margin-bottom: 1em;
+}
+
+.Nos {
+  background-image: linear-gradient(#F8F8F0, #F8F8F0); /* Isso é redundante se o body já tem a cor */
+  color: #032F1A;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Nostitulo {
+  text-align: center;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+.nos-content-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.nos-text-block {
+  flex: 2;
+  min-width: 350px;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.Nostexto1,
+.Nostexto2,
+.Nostexto3 {
+  padding: 0;
+  margin-bottom: 1.2em;
+  max-width: none;
+}
+
+.nos-images-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+  min-width: 200px;
+}
+.pessoas,
+.pessoas2 {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.menu-icon {
+  width: 50px;
+  height: auto;
+  cursor: pointer;
+  z-index: 1001; /* Garante que o ícone esteja acima de tudo */
+}
+
+.dropdown-menu {
+  display: none; /* Garante que o menu esteja oculto por padrão */
+  position: absolute; /* Permite posicionar o menu com top/right */
+  top: 100%; /* Posiciona logo abaixo do cabeçalho */
+  right: 20px; /* Alinha com a borda direita */
+  background-color: #F8F8F0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  min-width: 200px;
+  z-index: 1000; /* Garante que o menu fique acima de outros conteúdos */
+  /* Certifique-se de que não há nada aqui que possa impedir a exibição */
+}
+
+.dropdown-menu.show {
+  display: block; /* MUITO IMPORTANTE: Faz o menu aparecer */
+  /* Opcional: Adicione transições aqui se quiser uma animação suave */
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu li {
+  padding: 8px 15px;
+  text-align: left;
+}
+
+.dropdown-menu li:hover {
+  background-color: #e0e0e0;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: #032F1A;
+  display: block;
+}
+
+.dropdown-menu li a:hover {
+  color: #555;
+}
+
+/* --- REGRAS DE CONTEÚDO ESPECÍFICO DE PÁGINAS --- */
+.nossas-acoes-sociais-content {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #F8F8F0;
+  border-radius: 8px;
+  line-height: 1.6;
+  color: #032F1A;
+}
+
+.nossas-acoes-sociais-title {
+  text-align: center;
+  color: #032F1A;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+}
+
+.nossas-acoes-sociais-content p {
+  margin-bottom: 10px;
+}
+
+.calendario-content { /* Mudei para calendario-content para padronizar com a seção */
+  background-color: #F8F8F0;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  line-height: 1.6;
+  color: #032F1A;
+}
+
+.calendario-image { /* Use esta classe para a imagem */
+  width: 150px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block; /* Para que margin: auto funcione e a centralize */
+  margin: 20px auto; /* Centraliza a imagem no calendário */
+}
