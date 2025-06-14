@@ -1,76 +1,29 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggleButton = document.getElementById('menuToggle');
+    const dropdownMenu = document.getElementById('dropdownMenu');
 
-.cabecalho {
-    background-color: #A6CD57;
-    color: #010101;
-    display: flex;
-    justify-content: space-around;
-    align-items: center; 
-    padding: 10px 0; 
-}
+    if (menuToggleButton && dropdownMenu) {
+        menuToggleButton.addEventListener('click', function() {
+            dropdownMenu.classList.toggle('show'); // Alterna a classe 'show'
+        });
 
-.cabecalho-imagem {
-    width: 80px; 
-    height: auto; 
-    max-width: 100%; 
-    margin: 0 px;
-    padding: 0px 0; 
-}
+        // Fechar o menu se clicar fora dele
+        document.addEventListener('click', function(event) {
+            if (!dropdownMenu.contains(event.target) && !menuToggleButton.contains(event.target)) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
 
-  .menu {
-      display: inline-block; /* Permite que os itens fiquem lado a lado */
-    width: 80px; 
-    height: auto; 
-    max-width: 100%;
-      margin: 0 px;
-      padding: 0px 0; 
-      color: inherit; /* Herda a cor do texto do .cabecalho */
-  }
-.hazbin {
-    background-image: linear-gradient(#F8F8F0, #F8F8F0);
-    color: #032F1A;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 0;
-    min-height: 200px; /* Adicionei uma altura mínima para visualização */
-    text-align: center;
-}
-body{
-  font-family: "Inknut Antiqua", serif;
-  }
-
-.morador-pet{
-  width: 10%;
-  padding: 0 20px;
-}
-
-.VibraCampoCidade-title{
-  padding: 10px 20px ;
-}
-.hazbin-title-um{
-  padding:0 20px;
-}
-.hazbin-title-dois{
-     padding:10px 20px;
-}
-
-.morador-imagem{
-  width: 225px;
-}
-
-.insta-imagem{
-  width: 25px;
-}
-
-.tiktok-imagem{
-  width: 40px;
-}
-
-.email-imagem{
-  width: 40px;
-}
+        // NOVO: Fechar o menu quando um item é clicado (se o link leva a uma nova página)
+        // Adicione este bloco para fechar o menu ao clicar em um link
+        const menuLinks = dropdownMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                // Remove a classe 'show' para fechar o menu
+                dropdownMenu.classList.remove('show');
+                // Se o link é para uma âncora na mesma página, o menu fecha.
+                // Se o link é para uma nova página, ele fecha antes da navegação.
+            });
+        });
+    }
+});
