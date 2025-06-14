@@ -37,7 +37,7 @@
 
 body {
   font-family: "Inknut Antiqua", serif;
-  background-color: #F8F8F0; /* Use background-color diretamente, não background-image */
+  background-color: #F8F8F0; /* Esta é a cor que você deseja para o fundo de todo o site */
 }
 
 .VibraCampoCidade-title {
@@ -132,100 +132,93 @@ body {
   min-width: 200px;
 }
 .pessoas,
-.pessoas2 {
+.pessoas1 {
   width: 300px;
   height: auto;
   object-fit: cover;
   border-radius: 8px;
 }
 
-.menu-icon {
-  width: 50px;
-  height: auto;
-  cursor: pointer;
-  z-index: 1001; /* Garante que o ícone esteja acima de tudo */
-}
+  .menu-icon { /* A imagem do ícone do menu */
+    width: 50px; /* Ajuste o tamanho do ícone do menu para sua preferência */
+    height: auto;
+    cursor: pointer; /* Indica que é clicável */
+    z-index: 1001; /* Garante que o ícone fique acima do menu */
+  }
 
-.dropdown-menu {
-  display: none; /* Garante que o menu esteja oculto por padrão */
-  position: absolute; /* Permite posicionar o menu com top/right */
-  top: 100%; /* Posiciona logo abaixo do cabeçalho */
-  right: 20px; /* Alinha com a borda direita */
-  background-color: #F8F8F0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  min-width: 200px;
-  z-index: 1000; /* Garante que o menu fique acima de outros conteúdos */
-  /* Certifique-se de que não há nada aqui que possa impedir a exibição */
-}
+  .dropdown-menu {
+    display: none; /* ESCONDE O MENU POR PADRÃO */
+    position: absolute; /* Posiciona o menu de forma absoluta em relação ao cabeçalho */
+    top: 100%; /* Coloca o menu logo abaixo do cabeçalho */
+    right: 20px; /* Alinha o menu com a borda direita do cabeçalho */
+    background-color: #F8F8F0; /* Cor de fundo do menu */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    min-width: 200px; /* Largura mínima do menu */
+    z-index: 1000; /* Garante que o menu fique acima de outros conteúdos */
+    list-style: none; /* Remove os marcadores de lista padrão */
+    padding: 10px 0; /* Padding interno */
+  }
 
-.dropdown-menu.show {
-  display: block; /* MUITO IMPORTANTE: Faz o menu aparecer */
-  /* Opcional: Adicione transições aqui se quiser uma animação suave */
-}
+  .dropdown-menu.show {
+    display: block; /* EXIBE O MENU QUANDO A CLASSE 'show' É ADICIONADA VIA JS */
+  }
 
-.dropdown-menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+  .dropdown-menu ul {
+    list-style: none; /* Garante que a UL interna não tenha marcadores */
+    padding: 0;
+    margin: 0;
+  }
 
-.dropdown-menu li {
-  padding: 8px 15px;
-  text-align: left;
-}
+  .dropdown-menu li {
+    padding: 8px 15px;
+    text-align: left;
+  }
 
-.dropdown-menu li:hover {
-  background-color: #e0e0e0;
-}
+  .dropdown-menu li:hover {
+    background-color: #e0e0e0; /* Cor de fundo ao passar o mouse */
+  }
 
-.dropdown-menu li a {
-  text-decoration: none;
-  color: #032F1A;
-  display: block;
-}
+  .dropdown-menu li a {
+    text-decoration: none;
+    color: #032F1A; /* Cor do texto dos links */
+    display: block; /* Faz o link ocupar toda a área do <li> */
+  }
 
-.dropdown-menu li a:hover {
-  color: #555;
-}
+  .dropdown-menu li a:hover {
+    color: #555; /* Cor do texto do link ao passar o mouse */
+  }
+
+  /* Ajuste no cabeçalho para garantir que o position: relative funcione bem com o menu absoluto */
+  .cabecalho {
+    position: relative; /* Essencial para o posicionamento absoluto do dropdown */
+    /* Outras propriedades existentes... */
+  }
 
 /* --- REGRAS DE CONTEÚDO ESPECÍFICO DE PÁGINAS --- */
+/* No seu arquivo style.css existente, adicione estas novas regras */
+
+/* Estilos para o contêiner geral da página de Ações Sociais */
 .nossas-acoes-sociais-content {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #F8F8F0;
-  border-radius: 8px;
-  line-height: 1.6;
-  color: #032F1A;
+    max-width: 900px; /* Largura máxima para o conteúdo */
+    margin: 40px auto; /* Centraliza e adiciona margem acima/abaixo */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #ffffff; /* Fundo branco para a área de conteúdo */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra suave */
+    line-height: 1.6; /* Espaçamento entre linhas para melhor legibilidade */
+    color: #333; /* Cor do texto */
 }
-
+/* Estilos para o título dentro da seção de Ações Sociais */
 .nossas-acoes-sociais-title {
-  text-align: center;
-  color: #032F1A;
-  margin-bottom: 20px;
-  padding-bottom: 15px;
+    text-align: center; /* Centraliza o título */
+    color: #032F1A; /* Cor do título */
+    margin-bottom: 25px; /* Espaço abaixo do título */
+    padding-bottom: 10px; /* Padding interno para o título */
+    border-bottom: 1px solid #eee; /* Linha sutil abaixo do título */
 }
-
+/* Estilos para os parágrafos dentro da seção de Ações Sociais */
 .nossas-acoes-sociais-content p {
-  margin-bottom: 10px;
-}
-
-.calendario-content { /* Mudei para calendario-content para padronizar com a seção */
-  background-color: #F8F8F0;
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
-  line-height: 1.6;
-  color: #032F1A;
-}
-
-.calendario-image { /* Use esta classe para a imagem */
-  width: 150px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-  display: block; /* Para que margin: auto funcione e a centralize */
-  margin: 20px auto; /* Centraliza a imagem no calendário */
+    margin-bottom: 15px; /* Espaço abaixo de cada parágrafo */
 }
