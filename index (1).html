@@ -1,224 +1,66 @@
-/* --- INÍCIO DO SEU style.css --- */
+<!DOCTYPE html>
+<html lang="pt-br">
 
-.cabecalho {
-  background-color: #A6CD57;
-  color: #010101;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  position: relative; /* Mantenha AQUI */
-}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibra Campo Cidade</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap"
+        rel="stylesheet">
+</head>
 
-.cabecalho-imagem {
-  width: 80px;
-  height: auto;
-  max-width: 100%;
-}
+<body>
+  <header class="cabecalho">
+      <a href="index.html"> 
+          <img class="cabecalho-imagem" src="./img/logo.png" alt="logotipo VibraCampoCidade.png">
+      </a>
 
-/* Esta classe .menu parece não ser usada no HTML do menu, mas mantida caso seja para outra coisa */
-.menu {
-  width: 80px;
-  height: auto;
-  max-width: 100%;
-}
+      <img class="menu-icon" id="menuToggle" src="./img/—Pngtree— vector icon_3791388.png" alt="Ícone de Menu">
 
-.hazbin {
-  background-image: linear-gradient(#F8F8F0, #F8F8F0); /* Isso é redundante se o body já tem a cor */
-  color: #032F1A;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 15px 0;
-  min-height: 200px;
-  text-align: center;
-}
+      <nav id="dropdownMenu" class="dropdown-menu">
+          <ul>
+              <li><a href="nossas-acoes.html">Nossas Ações Sociais</a></li>
+              <li><a href="calendario.html">Calendário de Eventos</a></li>
+              <li><a href="nossa-historia.html">Nossa História</a></li>
+              <li><a href="galeria.html">Galeria</a></li>
+              <li><a href="conte-sua-historia.html">Conte sua História</a></li>
+          </ul>
+      </nav>
+  </header>
+    <main>
+        <section class="hazbin">
+            <div class="main-content-wrapper">
+                <div class="text-block">
+                    <h2 class="VibraCampoCidade-title">Seja bem-vindo ao projeto Vibra Campo Cidade!!</h2>
+                    <p class="VibraCampoCidade-um">Este é o nosso espaço para celebrar a união entre campo e cidade, mostrando suas belezas e a interdependência que nos une.</p>
+                    <p class="VibraCampoCidade-title-um-e-meio">Aqui, contamos as histórias inspiradoras de quem vive e transita entre esses mundos, fortalecendo nossos laços.</p>
+                    <p class="VibraCampoCidade-title-dois">Explorem, conectem-se e sintam-se em casa! Sejam muito bem-vindos!!</p>
+                </div>
+                <img class="paisagem1" src="./img/paisagem.png" alt="Paisagem de cidade e campo">
+            </div>
+        </section>
 
-body {
-  font-family: "Inknut Antiqua", serif;
-  background-color: #F8F8F0; /* Esta é a cor que você deseja para o fundo de todo o site */
-}
-
-.VibraCampoCidade-title {
-  padding: 10px 20px;
-  text-align: center;
-}
-
-.main-content-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 900px;
-  margin: 20px auto;
-  gap: 30px;
-  flex-wrap: wrap;
-  text-align: left;
-}
-
-.text-block {
-  flex: 1;
-  min-width: 300px;
-  padding: 0 20px;
-  text-align: left;
-}
-
-.paisagem1 {
-  width: 350px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.hazbin p {
-  max-width: 600px;
-  line-height: 1.5;
-  margin-bottom: 1em;
-}
-
-.VibraCampoCidade-um,
-.VibraCampoCidade-title-um-e-meio,
-.VibraCampoCidade-title-dois {
-  margin-bottom: 1em;
-}
-
-.Nos {
-  background-image: linear-gradient(#F8F8F0, #F8F8F0); /* Isso é redundante se o body já tem a cor */
-  color: #032F1A;
-  padding: 20px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.Nostitulo {
-  text-align: center;
-  padding: 10px 20px;
-  margin-bottom: 20px;
-}
-
-.nos-content-wrapper {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  max-width: 1000px;
-  margin: 0 auto;
-  gap: 40px;
-  flex-wrap: wrap;
-  padding: 0 20px;
-}
-
-.nos-text-block {
-  flex: 2;
-  min-width: 350px;
-  text-align: left;
-  line-height: 1.6;
-}
-
-.Nostexto1,
-.Nostexto2,
-.Nostexto3 {
-  padding: 0;
-  margin-bottom: 1.2em;
-  max-width: none;
-}
-
-.nos-images-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  flex: 1;
-  min-width: 200px;
-}
-.pessoas,
-.pessoas1 {
-  width: 300px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-  .menu-icon { /* A imagem do ícone do menu */
-    width: 50px; /* Ajuste o tamanho do ícone do menu para sua preferência */
-    height: auto;
-    cursor: pointer; /* Indica que é clicável */
-    z-index: 1001; /* Garante que o ícone fique acima do menu */
-  }
-
-  .dropdown-menu {
-    display: none; /* ESCONDE O MENU POR PADRÃO */
-    position: absolute; /* Posiciona o menu de forma absoluta em relação ao cabeçalho */
-    top: 100%; /* Coloca o menu logo abaixo do cabeçalho */
-    right: 20px; /* Alinha o menu com a borda direita do cabeçalho */
-    background-color: #F8F8F0; /* Cor de fundo do menu */
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    min-width: 200px; /* Largura mínima do menu */
-    z-index: 1000; /* Garante que o menu fique acima de outros conteúdos */
-    list-style: none; /* Remove os marcadores de lista padrão */
-    padding: 10px 0; /* Padding interno */
-  }
-
-  .dropdown-menu.show {
-    display: block; /* EXIBE O MENU QUANDO A CLASSE 'show' É ADICIONADA VIA JS */
-  }
-
-  .dropdown-menu ul {
-    list-style: none; /* Garante que a UL interna não tenha marcadores */
-    padding: 0;
-    margin: 0;
-  }
-
-  .dropdown-menu li {
-    padding: 8px 15px;
-    text-align: left;
-  }
-
-  .dropdown-menu li:hover {
-    background-color: #e0e0e0; /* Cor de fundo ao passar o mouse */
-  }
-
-  .dropdown-menu li a {
-    text-decoration: none;
-    color: #032F1A; /* Cor do texto dos links */
-    display: block; /* Faz o link ocupar toda a área do <li> */
-  }
-
-  .dropdown-menu li a:hover {
-    color: #555; /* Cor do texto do link ao passar o mouse */
-  }
-
-  /* Ajuste no cabeçalho para garantir que o position: relative funcione bem com o menu absoluto */
-  .cabecalho {
-    position: relative; /* Essencial para o posicionamento absoluto do dropdown */
-    /* Outras propriedades existentes... */
-  }
-
-/* --- REGRAS DE CONTEÚDO ESPECÍFICO DE PÁGINAS --- */
-/* No seu arquivo style.css existente, adicione estas novas regras */
-
-/* Estilos para o contêiner geral da página de Ações Sociais */
-.nossas-acoes-sociais-content {
-    max-width: 900px; /* Largura máxima para o conteúdo */
-    margin: 40px auto; /* Centraliza e adiciona margem acima/abaixo */
-    padding: 20px; /* Espaçamento interno */
-    background-color: #ffffff; /* Fundo branco para a área de conteúdo */
-    border-radius: 8px; /* Cantos arredondados */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra suave */
-    line-height: 1.6; /* Espaçamento entre linhas para melhor legibilidade */
-    color: #333; /* Cor do texto */
-}
-/* Estilos para o título dentro da seção de Ações Sociais */
-.nossas-acoes-sociais-title {
-    text-align: center; /* Centraliza o título */
-    color: #032F1A; /* Cor do título */
-    margin-bottom: 25px; /* Espaço abaixo do título */
-    padding-bottom: 10px; /* Padding interno para o título */
-    border-bottom: 1px solid #eee; /* Linha sutil abaixo do título */
-}
-/* Estilos para os parágrafos dentro da seção de Ações Sociais */
-.nossas-acoes-sociais-content p {
-    margin-bottom: 15px; /* Espaço abaixo de cada parágrafo */
-}
+        <section class="Nos">
+            <h2 class="Nostitulo">Um pouco sobre nós!</h2>
+            <div class="nos-content-wrapper">
+                <div class="nos-text-block">
+                    <p class="Nostexto1">Somos um grupo beneficente apaixonado e dedicado a transformar realidades no meio rural. Acreditamos profundamente no poder do conhecimento e da cultura como ferramentas de desenvolvimento e empoderamento. Por isso, nosso trabalho é focado em levar essas riquezas diretamente para comunidades que, muitas vezes, enfrentam barreiras geográficas e sociais para ter acesso a elas.</p>
+                    <p class="Nostexto2">Através de programas educativos, atividades culturais e iniciativas de capacitação, buscamos enriquecer a vida das pessoas do campo, valorizando suas tradições e abrindo novas perspectivas. Mas nossa missão vai além: entendemos que muitas famílias precisam de um suporte mais imediato.</p>
+                    <p class="Nostexto3">Por isso, estendemos nosso apoio a famílias em situação de vulnerabilidade, oferecendo a ajuda necessária para que possam enfrentar seus desafios com mais dignidade, seja através de doações, orientação ou outros recursos essenciais. Nosso compromisso é construir pontes e garantir que ninguém seja deixado para trás.</p>
+                </div>
+                <div class="nos-images-block">
+                    <img class="pessoas" src="./img/pessoas.png" alt="Pessoas sorrindo">
+                    <img class="pessoas1" src="./img/pessoas1.png" alt="Pessoas sorrindo">
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
