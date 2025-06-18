@@ -1,0 +1,418 @@
+.cabecalho {
+    background-color: #A6CD57;
+    color: #010101;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+}
+.titulo {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 30px; 
+    color: #02180d;
+    margin: 0;
+    white-space: nowrap;
+}
+.logo-area-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none; 
+    color: inherit; 
+}
+.cabecalho-imagem {
+  width: 80px;
+  height: auto;
+  max-width: 100%;
+}
+
+.menu {
+  width: 80px;
+  height: auto;
+  max-width: 100%;
+}
+
+.hazbin {
+  background-image: linear-gradient(#F8F8F0, #F8F8F0); 
+  color: #032F1A;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  min-height: 200px;
+  text-align: center;
+}
+
+body {
+  font-family: "Inknut Antiqua", serif;
+  background-color: #F8F8F0; 
+}
+
+.VibraCampoCidade-title {
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.main-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 900px;
+  margin: 20px auto;
+  gap: 30px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.text-block {
+  flex: 1;
+  min-width: 300px;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.paisagem1 {
+  width: 350px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.hazbin p {
+  max-width: 600px;
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+.menu-icon { 
+    width: 50px; 
+    height: auto;
+    cursor: pointer; 
+    z-index: 1001;
+  }
+
+  .dropdown-menu {
+    display: none; 
+    position: absolute;
+    top: 100%; 
+    right: 20px; 
+    background-color: #F8F8F0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    min-width: 200px;
+    z-index: 1000; 
+    list-style: none; 
+    padding: 10px 0; 
+  }
+
+  .dropdown-menu.show {
+    display: block; 
+  }
+
+  .dropdown-menu ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+  }
+
+  .dropdown-menu li {
+    padding: 8px 15px;
+    text-align: left;
+  }
+
+  .dropdown-menu li:hover {
+    background-color: #e0e0e0; 
+  }
+
+  .dropdown-menu li a {
+    text-decoration: none;
+    color: #032F1A; 
+    display: block; 
+  }
+
+  .dropdown-menu li a:hover {
+    color: #555; 
+  }
+  .cabecalho {
+    position: relative; 
+  }
+.nossas-acoes-sociais-content {
+  max-width: 900px; 
+  margin: 40px auto;
+  padding: 20px; 
+  background-color: #F8F8F0;
+  border-radius: 8px; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+  line-height: 1.6;
+  color: #333; 
+}
+.nossas-acoes-sociais-title {
+  text-align: center;
+  color: #032F1A; 
+  margin-bottom: 25px; 
+  padding-bottom: 10px; 
+  border-bottom: 1px solid #F8F8F0; 
+}
+.nossas-acoes-sociais-content p {
+  margin-bottom: 15px; 
+}
+
+
+.nossas-hitoria-content {
+  max-width: 900px; 
+  margin: 40px auto;
+  padding: 20px; 
+  background-color: #F8F8F0;
+  border-radius: 8px; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+  line-height: 1.6;
+  color: #333; 
+}
+.nossas-historia-title {
+  text-align: center;
+  color: #032F1A; 
+  margin-bottom: 25px; 
+  padding-bottom: 10px; 
+  border-bottom: 1px solid #F8F8F0; 
+}
+.nossas-hitoria-content p {
+  margin-bottom: 15px; 
+}
+
+.VibraCampoCidade-um,
+.VibraCampoCidade-title-um-e-meio,
+.VibraCampoCidade-title-dois {
+  margin-bottom: 1em;
+}
+
+.Nos {
+  background-image: linear-gradient(#F8F8F0, #F8F8F0);
+  color: #032F1A;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Nostitulo {
+  text-align: center;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+.nos-content-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.nos-text-block {
+  flex: 2;
+  min-width: 350px;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.Nostexto1,
+.Nostexto2,
+.Nostexto3 {
+  padding: 0;
+  margin-bottom: 1.2em;
+  max-width: none;
+}
+
+.nos-images-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+  min-width: 200px;
+}
+.pessoas,
+.pessoas1 {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.calendario-title {
+  text-align: center;
+  color: #032F1A; 
+  margin-bottom: 25px; 
+  padding-bottom: 10px; 
+  border-bottom: 1px solid #F8F8F0; 
+}
+.calendario-content p {
+  margin-bottom: 15px; 
+}
+.calendario {
+  width: 900px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.calendario-content{
+  max-width: 900px; 
+    margin: 40px auto;
+    padding: 20px; 
+    background-color: #F8F8F0;
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    line-height: 1.6;
+    color: #333; 
+  }
+
+.grupo1 {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.grupo2 {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.grupo3 {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.aula1 {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.aula2 {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.criancas1 {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.criancas2 {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.criancas3 {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.nossas-hitoria-content {
+  max-width: 900px; 
+  margin: 40px auto;
+  padding: 20px; 
+  background-color: #F8F8F0;
+  border-radius: 8px; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+  line-height: 1.6;
+  color: #333; 
+}
+.conte-sua-historia-title {
+  text-align: center;
+  color: #032F1A; 
+  margin-bottom: 25px; 
+  padding-bottom: 10px; 
+  border-bottom: 1px solid #F8F8F0; 
+}
+.conte-sua-historia p {
+  margin-bottom: 15px; 
+}
+.rodape {
+    background-color: #A6CD57;
+    color: #010101; 
+    padding: 40px 20px; 
+    text-align: center; 
+    margin-top: 50px; 
+}
+
+.rodape-conteudo {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    gap: 30px; 
+}
+.rodape-secao {
+    flex: 1; 
+    min-width: 250px;
+    text-align: left; 
+}
+
+.rodape-secao h3 {
+    font-family: "Inknut Antiqua", serif; 
+    font-size: 1.2em;
+    margin-bottom: 15px; 
+    color: #032F1A; 
+}
+
+.rodape-secao p {
+    font-size: 0.9em; 
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.redes-sociais {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    gap: 15px
+}
+.rede-social-item {
+  display: flex;
+  align-items: center; 
+  gap: 8px;
+  text-decoration: none;
+  color: #010101; 
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+.rede-social-item:hover {
+  color: #032F1A;
+}
+.redes-sociais img {
+    width: 30px; 
+    height: auto;
+    transition: transform 0.3s ease;
+}
+.redes-sociais img:hover {
+    transform: scale(1.1); 
+}
+@media (max-width: 768px) {
+    .rodape-conteudo {
+        flex-direction: column;
+        align-items: center;
+    }
+    .rodape-secao {
+        min-width: auto; 
+        width: 100%; 
+        text-align: center;
+    }
+    .redes-sociais {
+        justify-content: center;
+    }
+}
