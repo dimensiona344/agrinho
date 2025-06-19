@@ -1,29 +1,56 @@
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggleButton = document.getElementById('menuToggle');
     const dropdownMenu = document.getElementById('dropdownMenu');
+    const acessibilidadeBtn = document.getElementById('acessibilidadeBtn');
+    
+    let leituraAtiva = localStorage.getItem('leituraAtiva') === 'true';
+    acessibilidadeBtn.textContent = leituraAtiva ? 'Desativar Leitor de Tela' : 'Ativar Leitor de Tela';
 
     if (menuToggleButton && dropdownMenu) {
+        menuToggleButton.setAttribute('aria-expanded', 'false');
         menuToggleButton.addEventListener('click', function() {
-            dropdownMenu.classList.toggle('show'); // Alterna a classe 'show'
+            const isExpanded = menuToggleButton.getAttribute('aria-expanded') === 'true';
+            menuToggleButton.setAttribute('aria-expanded', !isExpanded);
+            dropdownMenu.classList.toggle('show'); 
         });
 
-        // Fechar o menu se clicar fora dele
         document.addEventListener('click', function(event) {
             if (!dropdownMenu.contains(event.target) && !menuToggleButton.contains(event.target)) {
-                dropdownMenu.classList.remove('show');
+                if (dropdownMenu.classList.contains('show')) {
+                    dropdownMenu.classList.remove('show');
+                    menuToggleButton.setAttribute('aria-expanded', 'false');
+                }
             }
         });
 
-        // NOVO: Fechar o menu quando um item é clicado (se o link leva a uma nova página)
-        // Adicione este bloco para fechar o menu ao clicar em um link
         const menuLinks = dropdownMenu.querySelectorAll('a');
         menuLinks.forEach(link => {
             link.addEventListener('click', function() {
-                // Remove a classe 'show' para fechar o menu
                 dropdownMenu.classList.remove('show');
-                // Se o link é para uma âncora na mesma página, o menu fecha.
-                // Se o link é para uma nova página, ele fecha antes da navegação.
+                menuToggleButton.setAttribute('aria-expanded', 'false');
             });
         });
     }
+    acessibilidadeBtn.addEventListener('click', function() {
+        leituraAtiva = !leituraAtiva;
+        localStorage.setItem('leituraAtiva', leituraAtiva);
+
+        acessibilidadeBtn.textContent = leituraAtiva ? 'Desativar Leitor de Tela' : 'Ativar Leitor de Tela';
+
+        if (!leituraAtiva) {
+            window.speechSynthesis.cancel();
+        }
+    });
+
+    document.body.addEventListener('mouseover', function(event) {
+        if (leituraAtiva) {
+            const texto = event.target.innerText || event.target.alt;
+            if (texto) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(texto);
+                utterance.lang = 'pt-BR';
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+    });
 });
