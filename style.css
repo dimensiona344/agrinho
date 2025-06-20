@@ -268,12 +268,16 @@ body {
 }
 
 .calendario {
-  width: 900px;
+  max-width: 100%;
   height: auto;
-  object-fit: cover;
   border-radius: 8px;
   display: block;
   margin: 0 auto;
+}
+@media (min-width: 1000px) {
+  .calendario {
+    width: 900px;
+  }
 }
 
 .calendario-content {
